@@ -8,12 +8,11 @@ class Producto(models.Model):
         ('BEBIDA','bebida'),
         ('ALIMENTO','alimento'),
         ('POSTRE','postre'),
-
     ]
-nombre = models.CharField(max_length=100)
-precio = models.models.DecimalField(max_digits=6, decimal_places=2)
-categoria = models.CharField(max_length=10,choices= CATEGORIAS)
-disponible = models.BooleanField(default=True)
+    nombre = models.CharField(max_length=100)
+    precio = models.DecimalField(max_digits=6, decimal_places=2)
+    categoria = models.CharField(max_length=10,choices= CATEGORIAS)
+    disponible = models.BooleanField(default=True)
 
 def _str_(self):
     return f"(self.nombre)-$(self.precio)"
